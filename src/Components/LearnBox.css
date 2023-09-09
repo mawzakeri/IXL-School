@@ -1,0 +1,35 @@
+.learn-box{
+    border: 1px solid red;
+    border-radius: 5px;
+    position: relative;
+    padding: 10px 20px;
+    min-height: 250px;
+    background: #fff;
+}
+
+.learn-box .mark-session{
+    padding: 8px 15px 8px 22px;
+    border-radius: 20px 0 0 20px;
+    position: absolute;
+    right: -25px;
+    color: #fff;
+}
+
+.learn-box .faker-mark{
+    width: 100%;
+    height: 30px;
+}
+
+.learn-box .title{
+    font-size: 20px;
+}
+
+.border-light{
+    width: 90%;
+    border: 1px solid #e8e8e8;
+    margin: 8px 0;
+}
+
+.link-color{
+    color: #0dcaf0;
+}

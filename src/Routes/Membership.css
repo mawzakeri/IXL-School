@@ -1,0 +1,415 @@
+.responsive .members-section {
+    min-width: 320px;
+}
+
+.members-section {
+    margin: 0;
+    min-width: 974px;
+    padding: 0;
+    width: 100%;
+}
+
+.bg-img-section {
+    position: relative;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 881px) {
+    .header-section .members-bg-img-btm {
+        height: 514px;
+        min-width: 1920px;
+        width: 100%;
+        object-fit: fill;
+    }
+}
+
+@media screen and (min-width: 801px) {
+    .header-section .members-bg-img-btm {
+        height: 583px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 661px) {
+    .header-section .members-bg-img-btm {
+        height: 511px;
+    }
+}
+
+@media screen and (min-width: 481px) {
+    .header-section .members-bg-img-btm {
+        height: 1135px;
+    }
+
+    .header-section .members-bg-img-btm {
+        min-height: calc(100% + 1px);
+        height: 1094px;
+    }
+}
+
+@media screen and (min-width: 801px) {
+    .responsive .members-bg-img, .responsive .members-bg-img-btm, .responsive .members-bg-img-top {
+        min-width: 1920px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 481px) {
+    .responsive .members-bg-img, .responsive .members-bg-img-btm, .responsive .members-bg-img-top {
+        width: 800px;
+    }
+
+    .responsive .members-bg-img, .responsive .members-bg-img-btm, .responsive .members-bg-img-top {
+        min-height: 100%;
+        width: 480px;
+    }
+
+    .members-bg-img-btm.no-negative-bottom {
+        bottom: 0;
+    }
+
+    .members-bg-img-btm {
+        bottom: -1px;
+        transform: translateX(-50%);
+    }
+
+    .members-bg-img, .members-bg-img-btm, .members-bg-img-top {
+        position: absolute;
+        min-height: 100%;
+        min-width: 100%;
+        left: 50%;
+        z-index: -1;
+    }
+}
+
+
+@media screen and (min-width: 881px) {
+    .header-section .members-content {
+        padding-bottom: 105px;
+    }
+}
+
+@media screen and (min-width: 801px) {
+    .header-section .members-content {
+        padding-bottom: 110px;
+    }
+}
+
+@media screen and (min-width: 661px) {
+    .header-section .members-content {
+        padding-bottom: 100px;
+    }
+}
+
+@media screen and (min-width: 481px) {
+    .header-section .members-content {
+        padding-top: 25px;
+        padding-bottom: 90px;
+    }
+
+    .header-section .members-content {
+        padding-bottom: 70px;
+        padding-top: 30px;
+    }
+}
+
+@media screen and (min-width: 661px) {
+    .responsive .members-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .responsive .members-content {
+        box-sizing: border-box;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 0 auto;
+        max-width: 1014px;
+        min-width: 320px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 660px) {
+    .responsive .members-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .members-content {
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 25px;
+        padding-top: 25px;
+        width: 974px;
+    }
+}
+
+.header-section h1 {
+    color: #fff;
+    margin: 0 auto 15px auto;
+}
+
+.header-section h3 {
+    color: #fff;
+    margin: 0 auto 15px auto
+}
+
+.header-section .font-weight-normal {
+    font-weight: 400;
+}
+
+.header-section .circle-separator {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #fff;
+    margin: 0 8px 2px;
+}
+
+.fta-bg-lk {
+    background-color: transparent;
+    font-size: 0;
+    height: 100%;
+    left: 0;
+    line-height: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.fta-card > * {
+    flex: 0 0 auto;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.teacher-card .fta-title {
+    color: #4fd7c0;
+}
+
+.family-card .fta-title {
+    color: #8dc52b;
+}
+
+.admin-card .fta-title {
+    color: #00aaef;
+}
+
+.cta-style-hollow-crisp-green-tall {
+    background-color: #52b700;
+    border: 0;
+    color: #fff;
+    line-height: 32px;
+
+}
+
+.cta-style-hollow-crisp-green-tall:hover {
+    background-color: #69c130;
+}
+
+
+.fta-icon-container {
+    margin-bottom: 10px;
+}
+
+.fta-card .fta-btn-container {
+    flex: 1 0 auto;
+    z-index: 1;
+    width: 100%;
+}
+
+.fta-card > * {
+    flex: 0 0 auto;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.fta-btn-container .cta-btn:first-child {
+    margin-top: 0;
+}
+
+.three-btn-container .cta-btn {
+    margin: 5px auto;
+}
+
+.fta-btn-container .cta-btn {
+    border: 1px solid;
+    display: block;
+    height: 33px;
+    line-height: 31px;
+    max-width: 215px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.cta-style-solid-teal {
+    background-color: #4fd7c0;
+    border: 0;
+    color: #fff;
+    line-height: 32px;
+}
+
+.cta-btn {
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    height: 33px;
+    line-height: 32px;
+    min-width: 140px;
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+@media screen and (min-width: 801px) {
+    .fta-teacher-icon {
+        width: 175px;
+        height: 111px;
+    }
+}
+
+.fta-teacher-icon {
+    width: 151px;
+    height: 95px;
+}
+
+@media screen and (min-width: 661px) {
+    .fta-card-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.fta-card-container {
+    display: flex;
+    grid-gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.fta-card {
+    background: #fff;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    height: 300px;
+    border-radius: 8px;
+
+}
+
+/* first session */
+
+
+@media screen and (min-width: 881px) {
+    .awards-codie-2022 {
+        height: 50px;
+        width: 172px;
+    }
+}
+
+@media screen and (min-width: 661px) {
+    .awards-codie-2022 {
+        height: 25px;
+        width: 86px;
+    }
+}
+
+@media screen and (min-width: 481px) {
+    .awards-codie-2022 {
+        height: 25px;
+        width: 86px;
+    }
+}
+
+.awards-codie-2022 {
+    height: 25px;
+    width: 86px;
+}
+
+@media screen and (min-width: 881px) {
+    .awards-codie-2021 {
+        height: 50px;
+        width: 176px;
+    }
+}
+
+@media screen and (min-width: 661px) {
+    .awards-codie-2021 {
+        height: 25px;
+        width: 88px;
+    }
+}
+
+@media screen and (min-width: 881px) {
+    .awards-codie-2020 {
+        height: 50px;
+        width: 176px;
+    }
+}
+
+@media screen and (min-width: 661px) {
+    .awards-codie-2020 {
+        height: 25px;
+        width: 88px;
+    }
+}
+
+.memb-awards-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 40px;
+}
+
+.responsive .members-section {
+    min-width: 320px;
+}
+.members-section {
+    margin: 0;
+    min-width: 974px;
+    padding: 0;
+    width: 100%;
+}
+.bg-img-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.membership-personal-quote{
+    height: 250px;
+    display: flex;
+    align-items: center;
+}
+
+.membership-personal-quote *{
+    color: #fff;
+}
+
+.personal-quote-text{
+    font-size: 22px;
+}
+
+.footer-memb-img{
+    left: 0;
+    height: 100%;
+}
+
+.img-adwa{
+    height: 70px;
+    left: 0px;
+    object-fit: cover;
+    width: 55%;
+}
+
+/* second session */
