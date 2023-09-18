@@ -91,7 +91,6 @@ function UserHistory(){
 
         })
         unStableDate = [...new Set(unStableDate)];
-
         console.log(unStableDate,totalTime,timeCourse)
 
         setAllLengthQuiz(unStableLength)
@@ -149,7 +148,7 @@ function UserHistory(){
                                 </div>
                                 <div className="col-6 d-flex">
                                     <p className="px-1 col-2">
-                                        {timeSpent == 0 ? '*' : `${timeSpent > 500 ? `${timeSpent / 60 / 60}ساعت ` : `${timeSpent / 60} دقیقه `}`}
+                                        {timeSpent == 0 ? '*' : `${timeSpent > 1000 ? `${timeSpent / 60 / 60}ساعت ` : `${timeSpent / 60} دقیقه `}`}
                                     </p>
                                     <p className="px-1 col-2">
                                         {detailCourse?.hundred?.status.length}
@@ -162,7 +161,7 @@ function UserHistory(){
                                         </p>
                                         <div className="progress col-10">
                                             <div className="progress-bar progress-bar bg-success"
-                                                 style={{width: (detailCourse?.hundred?.rangeOfCorrect / (detailCourse?.hundred?.rangeOfInCorrect + detailCourse?.hundred?.rangeOfCorrect)) * 100}}
+                                                 style={{width: `${(detailCourse?.hundred?.rangeOfCorrect / (detailCourse?.hundred?.rangeOfInCorrect + detailCourse?.hundred?.rangeOfCorrect)) * 100}%`}}
                                                  role="progressbar" aria-label="Basic example" aria-valuenow="0"
                                                  aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
@@ -188,7 +187,7 @@ function UserHistory(){
                             </div>
                             <div className="col-6 d-flex">
                                 <p className="px-1 col-2">
-                                    {timeSpent == 0 ? '*' : `${timeSpent > 500 ? `${timeSpent / 60 / 60}ساعت ` : `${timeSpent / 60} دقیقه `}`}
+                                    {timeSpent == 0 ? '*' : `${timeSpent > 1000 ? `${Math.floor(timeSpent / 60 / 60)}ساعت ` : `${Math.floor(timeSpent / 60)} دقیقه `}`}
                                 </p>
                                 <p className="px-1 col-2">
                                     { detailCourse?.three?.status.length }

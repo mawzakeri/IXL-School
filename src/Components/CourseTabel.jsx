@@ -185,7 +185,8 @@ function TableComponent() {
                         });
                     return;
                 });
-        } else {
+        }
+        else {
             toast.error("برای ثبت آنالیز ابتدا وارد حساب کاربری خود شوید .");
             return;
         }

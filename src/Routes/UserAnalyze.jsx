@@ -15,7 +15,7 @@ function UserAnalyze(){
     const chartSetting = {
         yAxis: [
             {
-                label: 'rainfall (mm)',
+                label: 'دقیقه',
             },
         ],
         width: 500,
@@ -26,57 +26,11 @@ function UserAnalyze(){
             },
         },
     };
-    const dataset = [
-        {
-            london: 59,
-            month: 'Jan',
-        },
-        {
-            london: 50,
-            month: 'Fev',
-        },
-        {
-            london: 47,
-            month: 'Mar',
-        },
-        {
-            london: 54,
-            month: 'Apr',
-        },
-        {
-            london: 57,
-            month: 'May',
-        },
-        {
-            london: 60,
-            month: 'June',
-        },
-        {
-            london: 59,
-            month: 'July',
-        },
-        {
-            london: 65,
-            month: 'Aug',
-        },
-        {
-            london: 51,
-            month: 'Sept',
-        },
-        {
-            london: 60,
-            month: 'Oct',
-        },
-        {
-            london: 67,
-            month: 'Nov',
-        },
-        {
-            london: 61,
-            month: 'Dec',
-        },
-    ];
 
+    const [dataset , setAnalyze] = useState([{
+        date: '1402' ,
+        time: 20
+    }])
     const [userData , setData] = useState([]);
     const [timeSpent , setTimeSpent] = useState(0);
     const [dates , setDates] = useState([]);
@@ -112,6 +66,9 @@ function UserAnalyze(){
         let unStableDate = [];
         let unStableLength = 0;
         let totalTime = 0;
+        let arrayMountAnalyze = [];
+        let result = {};
+        let lastAnalyze = [];
         let timeCourse = {
             hundred: {status: []} ,
             three: {status: []}
@@ -127,6 +84,7 @@ function UserAnalyze(){
                     status : [...timeCourse?.hundred?.status , ...item.quizes.status] ,
                     time: item.time
                 }
+                arrayMountAnalyze.push({date: item.date, time: item.time})
             }
             else{
                 timeCourse.three = {
@@ -135,14 +93,35 @@ function UserAnalyze(){
                     status : [...timeCourse?.three?.status , ...item.quizes.status] ,
                     time: item.time
                 }
+                arrayMountAnalyze.push({date: item.date, time: item.time})
             }
-
             unStableLength += item.quizes.status.length
-
         })
+
+        arrayMountAnalyze.forEach(item => {
+            const date = item.date;
+            const time = parseInt(item.time);
+
+            if (result[date]) {
+                result[date] += time;
+            } else {
+                result[date] = time;
+            }
+        });
+
+        for(let i in result){
+            lastAnalyze.push({
+                date : i ,
+                time: +result[i] / 60
+            })
+        }
+
+
+        console.log(result)
+
         unStableDate = [...new Set(unStableDate)];
 
-        console.log(unStableDate,totalTime,timeCourse)
+        setAnalyze(lastAnalyze);
 
         setAllLengthQuiz(unStableLength)
         setDates(unStableDate);
@@ -192,7 +171,7 @@ function UserAnalyze(){
                                 زمان
                             </p>
                             <p className="bold-text">
-                                {`${timeSpent > 500 ? `${timeSpent / 60 / 60}ساعت ` : `${timeSpent / 60} دقیقه `}`}
+                                {`${timeSpent > 1000 ? `${Math.floor(timeSpent / 60 / 60)}ساعت ` : `${Math.floor(timeSpent / 60)} دقیقه `}`}
                             </p>
                             <p className="mb-0 text-muted">
                                 تمرین
@@ -218,9 +197,9 @@ function UserAnalyze(){
             <div className="d-flex align-items-center justify-content-between p-2">
                 <BarChart
                     dataset={dataset}
-                    xAxis={[{ scaleType: 'band', dataKey: 'month' }]}
+                    xAxis={[{ scaleType: 'band', dataKey: 'date' }]}
                     series={[
-                        { dataKey: 'london', label: 'تمرین', valueFormatter } ,
+                        { dataKey: 'time', label: 'تمرین', valueFormatter } ,
                     ]}
                     {...chartSetting}
                 />
